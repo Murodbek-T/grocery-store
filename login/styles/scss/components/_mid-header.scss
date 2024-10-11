@@ -1,0 +1,26 @@
+@use "../abstract/variables" as var;
+
+.mid-header {
+  padding-top: 12px;
+  margin-top: 8px;
+  a {
+    color: var.$mid-gray;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .mid_left {
+    strong {
+      color: var.$orange;
+    }
+  }
+
+  .mid_right {
+    .dropdown-toggle {
+      background-color: transparent;
+      color: var.$mid-gray;
+      border: none;
+    }
+  }
+}

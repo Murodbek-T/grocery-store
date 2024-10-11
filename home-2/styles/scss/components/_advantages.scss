@@ -1,0 +1,23 @@
+@use "../components/banners";
+
+.advantage1 {
+  @extend .banner;
+  background-image: url("../../src/images/advantage-banner1.png");
+}
+.advantage2 {
+  @extend .banner;
+  background-image: url("../../src/images/advantage-banner2.png");
+}
+
+.advantage3 {
+  @extend .banner;
+  background-image: url("../../src/images/advantage-banner3.png");
+}
+
+.advantages {
+  h1 {
+    font-size: 22px;
+    max-width: 234px;
+    line-height: 26px;
+  }
+}

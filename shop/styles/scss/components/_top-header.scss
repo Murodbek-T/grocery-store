@@ -1,0 +1,17 @@
+@use "../abstract/variables" as var;
+
+.top_header {
+  background-color: var.$purple;
+  color: #fff;
+  padding-top: 12px;
+
+  .timer {
+    p {
+      color: rgba(#fff, 0.7);
+    }
+    span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}

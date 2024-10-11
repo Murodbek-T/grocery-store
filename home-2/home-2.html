@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Grogin foods | Landing page</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3515/3515146.png"
+    />
+  </head>
+  <body>
+    <!--! Header components starts here -->
+    <div
+      class="top_header container-fluid d-flex justify-content-around align-items-center"
+    >
+      <p>
+        FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.
+      </p>
+      <div class="timer d-flex gap-2 ms-5">
+        <p>Until the end of the sale:</p>
+        <span class="days">00</span>
+        <p>days</p>
+        <span class="hours">00</span>
+        <p>hours</p>
+        <span class="minutes">00</span>
+        <p>minutes</p>
+        <span class="seconds">00</span>
+        <p>seconds</p>
+      </div>
+    </div>
+    <div
+      class="mid-header container d-flex justify-content-between align-items-center"
+    >
+      <div class="mid_left d-flex gap-5 align-items-center">
+        <ul class="d-flex gap-3">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+        <p>We deliver to you every day from <strong>7:00 to 23:00</strong></p>
+      </div>
+      <div class="mid_right d-flex gap-3 align-items-center">
+        <div class="dropdown-center">
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdownMenuButtonLang"
+          >
+            Language
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="English"
+                >English</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="Russian"
+                >Russian</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="Uzbek"
+                >Uzbek</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown-center">
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdownMenuButtonCurrency"
+          >
+            Currency
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="USD"
+                >USD</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="RUB"
+                >RUB</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="SUM"
+                >SUM</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#">Order Tracking</a>
+      </div>
+    </div>
+    <div class="navbar container d-flex">
+      <div class="nav_left d-flex align-items-center gap-4">
+        <a href="./home-2.html"
+          ><img src="./src/icons/logo.svg" alt="Logo"
+        /></a>
+
+        <button
+          class="btn btn-primary categories"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list"></i> Categories
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Categories
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <i class="bi bi-apple"></i> Fruits & Vegetables
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Apple</a></li>
+                      <li><a href="#">Banana</a></li>
+                      <li><a href="#">Grape</a></li>
+                      <li><a href="#">Potato</a></li>
+                      <li><a href="#">Tomato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <i class="bi bi-egg-fried"></i> Meats & Seafood
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Beef</a></li>
+                      <li><a href="#">Sushi</a></li>
+                      <li><a href="#">Lamb</a></li>
+                      <li><a href="#">Chicken</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <i class="bi bi-egg"></i> Breakfast & Diary
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Sausages</a></li>
+                      <li><a href="#">Eggs</a></li>
+                      <li><a href="#">Fruit juice</a></li>
+                      <li><a href="#">Pancakes</a></li>
+                      <li><a href="#">Sweets</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    <i class="fa-solid fa-bread-slice"></i> Breads & Bakery
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Strawberry cake</a></li>
+                      <li><a href="#">White bread</a></li>
+                      <li><a href="#">Black bread</a></li>
+                      <li><a href="#">Biscuits</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    <i class="bi bi-cup-hot"></i> Beverages
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Cappucino</a></li>
+                      <li><a href="#">Espresso</a></li>
+                      <li><a href="#">Milk Latte</a></li>
+                      <li><a href="#">Americano</a></li>
+                      <li><a href="#">MAcchiato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input
+        type="text"
+        class="form-control search"
+        style="width: 500px"
+        placeholder="Search for products, categories or brands..."
+      />
+      <div class="nav_right d-flex gap-4 align-items-center">
+        <div class="action d-flex align-items-center">
+          <img src="./src/icons/account.svg" alt="" /> <a href="/login/login.html">Account</a>
+        </div>
+        <div class="action d-flex align-items-center gap-2">
+          <div class="img">
+            <img src="./src/icons/wishlist.svg" alt="" />
+            <div class="counter">0</div>
+          </div>
+          <a href="#">Wishlist</a>
+        </div>
+        <div class="action d-flex align-items-center gap-2">
+          <div class="img">
+            <img src="./src/icons/cart.svg" alt="" />
+            <div class="counter cart-counter"></div>
+          </div>
+          <a href="/cart/cart.html">Your Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="lower_header container d-flex justify-content-between mt-2">
+      <div class="lower_left d-flex align-items-center gap-4">
+        <a href="./home-2.html" class="nav-active">Home</a>
+        <a href="/shop/shop.html">Shop</a>
+        <a href="/shop/shop.html">Fruits & Vegetables</a>
+        <a href="/shop/shop.html">Beverages</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="lower_right d-flex">
+        <button
+          class="btn btn-dark dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Trending Products
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Product 1</a></li>
+          <li><a class="dropdown-item" href="#">Product 2</a></li>
+          <li><a class="dropdown-item" href="#">Product 3</a></li>
+        </ul>
+
+        <button
+          class="btn btn-dark dropdown-toggle btnSale"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Almost Finished
+          <span class="sale d-flex justify-content-center align-items-center">
+            Sale
+          </span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Sale 1</a></li>
+          <li><a class="dropdown-item" href="#">Sale 2</a></li>
+          <li><a class="dropdown-item" href="#">Sale 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--! Header components ends here -->
+
+    <div class="hero mt-3">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide carouselExampleIndicators"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            id="pagination"
+            type="button"
+            data-bs-target=".carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            id="pagination"
+            type="button"
+            data-bs-target=".carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="background d-flex flex-column ps-5 gap-2">
+              <div class="weekend-discount">Weekend Discount</div>
+              <h1>Shopping with us for better quality and the best price</h1>
+              <p>
+                We have prepared special discounts for you on grocery products.
+                Don't miss these opportunities...
+              </p>
+              <div class="lower d-flex align-items-center gap-3 mt-4">
+                <a href="/shop/shop.html"
+                  ><button class="btn btn-primary">Shop Now</button></a
+                >
+                <div class="price">
+                  <span class="new">$21.67</span>
+                  <span class="old">$26.67</span>
+                  <p class="underText">Don't miss this limited time offer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="background bcg2 d-flex flex-column ps-5 gap-2">
+              <div class="weekend-discount">Weekend Discount</div>
+              <h1>Get the best quality products at the lowest prices</h1>
+              <p>
+                We have prepared special discounts for you on organic breakfast
+                products
+              </p>
+              <div class="lower d-flex align-items-center gap-3 mt-4">
+                <a href="/shop/shop.html"
+                  ><button class="btn btn-primary">Shop Now</button></a
+                >
+                <div class="price">
+                  <span class="new">$21.67</span>
+                  <span class="old">$59.99</span>
+                  <p class="underText">Don't miss this limited time offer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories-wrapper d-flex m-5 align-items-center"></div>
+    <div class="main">
+      <div class="editors_pick container pt-5">
+        <div
+          class="editors_pick_top d-flex align-items-center justify-content-between"
+        >
+          <div class="text d-flex align-items-center gap-3">
+            <h1 class="fs-4 fw-bold">Editor's Pick</h1>
+            <p class="mt-2">New products with updated stocks.</p>
+          </div>
+          <a href="#"
+            ><button type="button" class="btn btn-primary viewAll">
+              View All <i class="bi bi-arrow-right"></i></button
+          ></a>
+        </div>
+        <div
+          class="editors_pick_bottom mt-3 d-flex justify-content-center gap-5"
+        >
+          <div class="column_card">
+            <div class="card" style="width: 18rem">
+              <div class="card_top">
+                <img
+                  src="./src/images/apple-juice.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="discount">75%</div>
+                <i class="bi bi-heart heart"></i>
+                <div class="label">Organic</div>
+                <button class="btn btn-primary add addToCart">
+                  <i class="bi bi-plus bi-plus-lg"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  100 Percent Apple Juice – 64 fl oz Bottle
+                </h5>
+                <p class="card-text">
+                  Vivamus adipiscing nisl ut dolor dignissim semper. Nulla
+                  luctus malesuada tincidunt.
+                </p>
+                <div class="price">
+                  <span class="new">$0.50</span> <span class="old">$1.99</span>
+                </div>
+                <div class="card_bottom">
+                  <p>This product is about to run out</p>
+                  <div class="bar"></div>
+                  <p>available only: <strong>23</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="double_cards">
+            <div class="row_card">
+              <div class="card p-3" style="max-width: 540px">
+                <div class="row g-0 d-flex align-items-center">
+                  <div class="col-md-4">
+                    <div class="card_top">
+                      <img
+                        src="./src/images/rising.png"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                      <div class="discount">75%</div>
+                      <i class="bi bi-heart heart"></i>
+                      <div class="label">Cold sale</div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body ms-3">
+                      <h5 class="card-title">
+                        Great Value Rising Crust Frozen Pizza, Supreme
+                      </h5>
+                      <img src="./src/icons/star-4.svg" alt="" />
+                      <div class="price">
+                        <span class="new">$8.99</span>
+                        <span class="old">$9.99</span>
+                      </div>
+                      <button
+                        class="btn btn-primary row_card-button mt-3 addToCart"
+                      >
+                        Add To Cart <i class="bi bi-plus bi-plus-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="timer d-flex mt-4 gap-3 align-items-center">
+                    <p class="day">00</p>
+                    <p class="hour">00</p>
+                    <p class="minute">00</p>
+                    <span style="font-size: 24px; margin-bottom: 20px">:</span>
+                    <p class="second">00</p>
+                    <h6 class="info">Remains until the end of the offer</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row_card">
+              <div class="card p-3" style="max-width: 540px">
+                <div class="row g-0 d-flex align-items-center">
+                  <div class="col-md-4">
+                    <div class="card_top">
+                      <img
+                        src="./src/images/orange-juice.png"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                      <div class="discount">41%</div>
+                      <i class="bi bi-heart heart"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body ms-3">
+                      <h5 class="card-title">
+                        Simply Orange Pulp Free Juice – 52 fl oz
+                      </h5>
+                      <img src="./src/icons/star-4.svg" alt="" />
+                      <div class="price">
+                        <span class="new">$2.45</span>
+                        <span class="old">$4.19</span>
+                      </div>
+                      <button
+                        class="btn btn-primary row_card-button mt-3 addToCart"
+                      >
+                        Add To Cart <i class="bi bi-plus bi-plus-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="timer d-flex mt-4 gap-3 align-items-center">
+                    <p class="day">00</p>
+                    <p class="hour">00</p>
+                    <p class="minute">00</p>
+                    <span style="font-size: 24px; margin-bottom: 20px">:</span>
+                    <p class="second">00</p>
+                    <h6 class="info">Remains until the end of the offer</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column_card">
+            <div class="card" style="width: 18rem">
+              <div class="card_top">
+                <img
+                  src="./src/images/california-pizza.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="discount">21%</div>
+                <i class="bi bi-heart heart"></i>
+                <button class="btn btn-primary add addToCart">
+                  <i class="bi bi-plus bi-plus-lg"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  California Pizza Kitchen Margherita, Crispy
+                </h5>
+                <p class="card-text">
+                  Vivamus adipiscing nisl ut dolor dignissim semper. Nulla
+                  luctus malesuada tincidunt.
+                </p>
+                <div class="price">
+                  <span class="new">$11.77</span>
+                  <span class="old">$14.77</span>
+                </div>
+                <div class="card_bottom">
+                  <p>This product is about to run out</p>
+                  <div class="bar"></div>
+                  <p>available only: <strong>19</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products container mt-5">
+        <div
+          class="products_top d-flex align-items-center justify-content-between"
+        >
+          <div class="text d-flex align-items-center gap-3">
+            <h1 class="fs-4 fw-bold">Category Products</h1>
+            <p class="mt-2">
+              Do not miss the current offers until the end of March.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary viewAll"
+            id="viewProducts"
+          >
+            View All <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="banners d-flex">
+          <div
+            class="banner d-flex flex-column align-items-start justify-content-around mt-4 p-4 mb-4"
+          >
+            <div class="topic">On This Week</div>
+            <h1>Make your grocery shopping easy with us</h1>
+            <p>Feed your family the best</p>
+            <a href="/shop/shop.html"
+              ><button class="btn banner-btn">
+                Shop Now <i class="bi bi-arrow-right"></i></button
+            ></a>
+          </div>
+          <div
+            class="banner banner2 d-flex flex-column align-items-start justify-content-around mt-4 p-4 mb-4"
+          >
+            <div class="topic">On This Week</div>
+            <h1>Get your everyday needs here with us</h1>
+            <p>A different kinda grocery store</p>
+            <a href="/shop/shop.html"
+              ><button class="btn banner-btn">
+                Shop Now <i class="bi bi-arrow-right"></i></button
+            ></a>
+          </div>
+        </div>
+
+        <div
+          class="products_bottom d-flex flex-wrap gap-4 justify-content-center mt-4"
+        ></div>
+      </div>
+
+      <div
+        class="motto container mt-4 mb-4 d-flex flex-column justify-content-center"
+      >
+        <div class="text pt-3 ps-3">
+          <h1 class="motto_text">
+            In store or online your health & safety is our top priority
+          </h1>
+          <p class="motto_description">
+            The only supermarket that makes your life easier, makes you enjoy
+            life and makes it better
+          </p>
+        </div>
+      </div>
+
+      <div class="best-sellers container">
+        <div
+          class="best-sellers_top d-flex align-items-center justify-content-between"
+        >
+          <div class="text d-flex align-items-center gap-3">
+            <h1 class="fs-4 fw-bold">Best Sellers</h1>
+            <p class="mt-2">
+              Dont miss this opportunity at a special discount just for this
+              week.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary viewAll"
+            id="bestViewAll"
+          >
+            View All <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+        <div class="best-sellers_bottom d-flex mt-4">
+          <div class="column d-flex flex-column"></div>
+          <div class="big-card d-flex flex-column"></div>
+          <div class="column d-flex flex-column"></div>
+        </div>
+      </div>
+
+      <div class="advantages container mt-4">
+        <div class="banners d-flex gap-3">
+          <div
+            class="banner advantage1 d-flex flex-column align-items-start justify-content-around mt-4 p-4 mb-4"
+          >
+            <div class="topic">On This Week</div>
+            <h1>We provide you the best quality products</h1>
+            <p>A family place for grocery</p>
+            <a href="/shop/shop.html"
+              ><button class="btn banner-btn">
+                Shop Now <i class="bi bi-arrow-right"></i></button
+            ></a>
+          </div>
+
+          <div
+            class="banner advantage2 d-flex flex-column align-items-start justify-content-around mt-4 p-4 mb-4"
+          >
+            <div class="topic">On This Week</div>
+            <h1>We make your grocery shopping more exciting</h1>
+            <p>Shine the morning...</p>
+            <a href="/shop/shop.html"
+              ><button class="btn banner-btn">
+                Shop Now <i class="bi bi-arrow-right"></i></button
+            ></a>
+          </div>
+
+          <div
+            class="banner advantage3 d-flex flex-column align-items-start justify-content-around mt-4 p-4 mb-4"
+          >
+            <div class="topic">On This Week</div>
+            <h1>The one supermarket that saves your money</h1>
+            <p>Breakfast made better</p>
+            <a href="/shop/shop.html"
+              ><button class="btn banner-btn">
+                Shop Now <i class="bi bi-arrow-right"></i></button
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="news container mt-3">
+        <div class="news_top d-flex align-items-center justify-content-between">
+          <div class="text d-flex align-items-center gap-3">
+            <h1 class="fs-4 fw-bold">Our News</h1>
+            <p class="mt-2">Some of the new posts this week</p>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary viewAll"
+            id="bestViewAll"
+          >
+            View All <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+        <div class="news_bottom mt-4 d-flex gap-3 align-items-center"></div>
+      </div>
+    </div>
+
+    <!--! Footer section-->
+    <footer class="mt-5">
+      <div
+        class="email container d-flex justify-content-between pt-5 align-items-center pb-5 mb-4"
+      >
+        <div class="email_left">
+          <h1>Join our newsletter for ₤10 offs</h1>
+          <p>
+            Register now to get latest updates on promotions & coupons.Don’t
+            worry, we not spam!
+          </p>
+        </div>
+        <div class="email_right">
+          <div class="input-group mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email address"
+              aria-label="Client's email input"
+              aria-describedby="basic-addon2"
+            />
+            <button class="btn btn-primary btn-send input-group-text">
+              Send
+            </button>
+          </div>
+          <p>
+            By subscribing you agree to our
+            <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer container mt-5">
+        <div class="footer_top d-flex justify-content-between mb-5 pb-5">
+          <ul>
+            <h5>Do you need help?</h5>
+            <li>
+              Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda nynat.
+              Pressa fåmoska.
+            </li>
+            <li>
+              <img src="./src/icons/phone.svg" alt="" />
+              <div class="phone">
+                <p>Monday-Friday: 08am-9pm</p>
+                <p
+                  class="h4"
+                  style="font-weight: 700; font-size: 20px; color: #000"
+                >
+                  0 800 300-353
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="./src/icons/envelope.svg" alt="" />
+              <div class="envelope">
+                <p>Need help with your order?</p>
+                <p
+                  class="h5"
+                  style="font-weight: 600; font-size: 14px; color: #000"
+                >
+                  info@example.com
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <h5>Make Money with Us</h5>
+            <li><a href="#">Sell on Grogin</a></li>
+            <li><a href="#">Sell Your Services on Grogin</a></li>
+            <li><a href="#">Sell on Grogin Business</a></li>
+            <li><a href="#">Sell Your Apps on Grogin</a></li>
+            <li><a href="#">Become an Affilate</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Sell-Publish with Us</a></li>
+            <li><a href="#">Become an Blowwe Vendor</a></li>
+          </ul>
+          <ul>
+            <h5>Let Us Help You</h5>
+            <li><a href="#">Accessibility Statement</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Returns & Replacements</a></li>
+            <li><a href="#">Shipping Rates & Policies</a></li>
+            <li><a href="#">Refund and Returns Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+          <ul>
+            <h5>Get to know us</h5>
+            <li><a href="#">Careers for Grogin</a></li>
+            <li><a href="#">About Grogin</a></li>
+            <li><a href="#">Inverstor Relations</a></li>
+            <li><a href="#">Grogin Devices</a></li>
+            <li><a href="#">Customer reviews</a></li>
+            <li><a href="#">Social Responsibility</a></li>
+            <li><a href="#">Store Locations</a></li>
+          </ul>
+          <ul>
+            <h5>Download our app</h5>
+            <li>
+              <a href="#"><img src="./src/icons/google-play.svg" alt="" /></a>
+              <p class="mt-2">Download App Get -10% Discount</p>
+            </li>
+            <li>
+              <a href="#"><img src="./src/icons/app-store.svg" alt="" /></a>
+              <p class="mt-2">Download App Get -20% Discount</p>
+            </li>
+
+            <li style="color: #000">Follow us on social media:</li>
+            <li>
+              <div class="links">
+                <div class="link">
+                  <a href="#"><img src="./src/icons/facebook.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/twitter.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/instagram.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/linkedin.svg" alt="" /></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer_bottom d-flex align-items-center justify-content-between mb-4"
+        >
+          <div class="copyright">
+            <p class="copyright-year"></p>
+            <div class="payment d-flex align-items-center gap-2">
+              <img src="./src/icons/visa.svg" alt="" />
+              <img src="./src/icons/circles.svg" alt="" />
+              <img src="./src/icons/paypal.svg" alt="" />
+              <img src="./src/icons/skrill.svg" alt="" />
+              <img src="./src/icons/klarna.svg" alt="" />
+            </div>
+          </div>
+          <div class="rules d-flex align-items-center gap-2">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Order Tracking</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--! Footer section ends-->
+
+    <!-- Connecting scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/header-timer.js"></script>
+    <script src="./js/products-timer.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/mid-header-dropdown.js"></script>
+    <script src="./js/categories.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/best-sellers.js"></script>
+    <script src="./js/news.js"></script>
+    <script src="./js/copyright.js"></script>
+    <script type="module" src="./js/cart-add.js"></script>
+  </body>
+</html>

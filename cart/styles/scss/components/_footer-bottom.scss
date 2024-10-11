@@ -1,0 +1,19 @@
+@use "../abstract/variables" as var;
+
+.sponsor {
+  color: var.$purple;
+  font-weight: 600;
+}
+
+.copyright-year {
+  color: var.$mid-gray;
+  font-size: 12px;
+}
+
+.rules {
+  a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 12px;
+  }
+}

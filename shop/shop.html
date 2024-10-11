@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shop with Grogin</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3515/3515146.png"
+    />
+  </head>
+  <body>
+    <!--! Header components starts here -->
+    <div
+      class="top_header container-fluid d-flex justify-content-around align-items-center"
+    >
+      <p>
+        FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.
+      </p>
+      <div class="timer d-flex gap-2 ms-5">
+        <p>Until the end of the sale:</p>
+        <span class="days">00</span>
+        <p>days</p>
+        <span class="hours">00</span>
+        <p>hours</p>
+        <span class="minutes">00</span>
+        <p>minutes</p>
+        <span class="seconds">00</span>
+        <p>seconds</p>
+      </div>
+    </div>
+    <div
+      class="mid-header container d-flex justify-content-between align-items-center"
+    >
+      <div class="mid_left d-flex gap-5 align-items-center">
+        <ul class="d-flex gap-3">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+        <p>We deliver to you every day from <strong>7:00 to 23:00</strong></p>
+      </div>
+      <div class="mid_right d-flex gap-3 align-items-center">
+        <div class="dropdown-center">
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdownMenuButtonLang"
+          >
+            Language
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="English"
+                >English</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="Russian"
+                >Russian</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item lang" href="#" data-value="Uzbek"
+                >Uzbek</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown-center">
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdownMenuButtonCurrency"
+          >
+            Currency
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="USD"
+                >USD</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="RUB"
+                >RUB</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item currency" href="#" data-value="SUM"
+                >SUM</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#">Order Tracking</a>
+      </div>
+    </div>
+    <div class="navbar container d-flex">
+      <div class="nav_left d-flex align-items-center gap-4">
+        <a href="../home-2/home-2.html"
+          ><img src="./src/icons/logo.svg" alt="Logo"
+        /></a>
+
+        <button
+          class="btn btn-primary categories"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list"></i> Categories
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Categories
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <i class="bi bi-apple"></i> Fruits & Vegetables
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Apple</a></li>
+                      <li><a href="#">Banana</a></li>
+                      <li><a href="#">Grape</a></li>
+                      <li><a href="#">Potato</a></li>
+                      <li><a href="#">Tomato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <i class="bi bi-egg-fried"></i> Meats & Seafood
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Beef</a></li>
+                      <li><a href="#">Sushi</a></li>
+                      <li><a href="#">Lamb</a></li>
+                      <li><a href="#">Chicken</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <i class="bi bi-egg"></i> Breakfast & Diary
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Sausages</a></li>
+                      <li><a href="#">Eggs</a></li>
+                      <li><a href="#">Fruit juice</a></li>
+                      <li><a href="#">Pancakes</a></li>
+                      <li><a href="#">Sweets</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    <i class="fa-solid fa-bread-slice"></i> Breads & Bakery
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Strawberry cake</a></li>
+                      <li><a href="#">White bread</a></li>
+                      <li><a href="#">Black bread</a></li>
+                      <li><a href="#">Biscuits</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    <i class="bi bi-cup-hot"></i> Beverages
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="d-flex flex-column gap-3">
+                      <li><a href="#">Cappucino</a></li>
+                      <li><a href="#">Espresso</a></li>
+                      <li><a href="#">Milk Latte</a></li>
+                      <li><a href="#">Americano</a></li>
+                      <li><a href="#">MAcchiato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input
+        type="text"
+        class="form-control search"
+        style="width: 500px"
+        placeholder="Search for products, categories or brands..."
+      />
+      <div class="nav_right d-flex gap-4 align-items-center">
+        <div class="action d-flex align-items-center">
+          <img src="./src/icons/account.svg" alt="" /> <a href="/login/login.html">Account</a>
+        </div>
+        <div class="action d-flex align-items-center gap-2">
+          <div class="img">
+            <img src="./src/icons/wishlist.svg" alt="" />
+            <div class="counter">0</div>
+          </div>
+          <a href="#">Wishlist</a>
+        </div>
+        <div class="action d-flex align-items-center gap-2">
+          <div class="img">
+            <img src="./src/icons/cart.svg" alt="" />
+            <div class="counter cart-counter"></div>
+          </div>
+          <a href="/cart/cart.html">Your Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="lower_header container d-flex justify-content-between mt-2">
+      <div class="lower_left d-flex align-items-center gap-4">
+        <a href="../home-2/home-2.html">Home</a>
+        <a href="./shop.html" class="nav-active">Shop</a>
+        <a href="./shop.html" class="nav-active">Fruits & Vegetables</a>
+        <a href="./shop.html" class="nav-active">Beverages</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="lower_right d-flex">
+        <button
+          class="btn btn-dark dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Trending Products
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Product 1</a></li>
+          <li><a class="dropdown-item" href="#">Product 2</a></li>
+          <li><a class="dropdown-item" href="#">Product 3</a></li>
+        </ul>
+
+        <button
+          class="btn btn-dark dropdown-toggle btnSale"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Almost Finished
+          <span class="sale d-flex justify-content-center align-items-center">
+            Sale
+          </span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Sale 1</a></li>
+          <li><a class="dropdown-item" href="#">Sale 2</a></li>
+          <li><a class="dropdown-item" href="#">Sale 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--! Header components ends here -->
+
+    <div class="main container d-flex">
+      <aside class="side-content mt-5 d-flex flex-column">
+        <h5 class="aside-heading">Widget price filter</h5>
+        <div class="price-inputs d-flex gap-2 mt-4 align-items-center">
+          <div class="min">
+            <label for="min">Min price</label>
+            <input
+              type="number"
+              class="form-control min-input"
+              style="width: 116px"
+              min="0"
+              value="0"
+              max="30"
+              id="min"
+            />
+          </div>
+          <div class="max">
+            <label for="max">Max price</label>
+            <input
+              type="number"
+              class="form-control max-input"
+              style="width: 116px"
+              min="0"
+              value="30"
+              max="30"
+              id="max"
+            />
+          </div>
+        </div>
+        <input
+          type="range"
+          class="mt-4"
+          min="0"
+          max="30"
+          step="0.5"
+          id="customRange3"
+          style="width: 260px"
+        />
+
+        <div
+          class="filter d-flex align-items-center mt-5 justify-content-between pb-4"
+        >
+          <p class="mt-3 filter-price"></p>
+          <button class="btn btn-primary filter-btn">Filter</button>
+        </div>
+
+        <h5 class="aside-heading mt-4">Product Categories</h5>
+        <div class="checkbox-wrapper pb-4">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Fruits & Vegetables"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Fruits & Vegetables
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Baby & Pregnancy"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Baby & Pregnancy
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Beverages"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Beverages
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Meats & Seafood"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Meats & Seafood
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Biscuits & Snacks"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Biscuits & Snacks
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Breads & Bakery"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Breads & Bakery
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Breakfast & Fast"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Breakfast & Fast
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Frozen Foods"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Frozen Foods
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Grocery & Staples"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Grocery & Staples
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Healthcare"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Healthcare
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Household needs"
+              id="flexCheckChecked"
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Household needs
+            </label>
+          </div>
+        </div>
+
+        <h5 class="aside-heading mt-4">Filter by Color</h5>
+        <div class="color-picker pb-4">
+          <input
+            type="color"
+            class="form-control form-control-color"
+            id="exampleColorInput"
+            value="#000000"
+            title="Choose your color"
+          />
+        </div>
+
+        <h5 class="aside-heading mt-4">Filter by Brands</h5>
+        <div class="form-check brands pb-4">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="Fresh"
+            id="flexCheckChecked"
+          />
+          <label class="form-check-label" for="flexCheckChecked"> Fresh </label>
+        </div>
+
+        <h5 class="aside-heading mt-4">Filter by Status</h5>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="In Stock"
+            id="flexCheckChecked"
+          />
+          <label class="form-check-label" for="flexCheckChecked">
+            In Stock
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="On Sale"
+            id="flexCheckChecked"
+          />
+          <label class="form-check-label" for="flexCheckChecked">
+            On Sale
+          </label>
+        </div>
+      </aside>
+
+      <section class="shopping mt-5 ps-5">
+        <div class="shopping-heading">
+          <div class="label-text">On This Week</div>
+          <h1>Grocery store with different treasure</h1>
+          <p>
+            We have prepared special discounts for you on grocery products...
+          </p>
+        </div>
+
+        <div
+          class="shop-products d-flex align-items-center gap-2 flex-wrap mt-5"
+        ></div>
+        <div id="pagination"></div>
+      </section>
+    </div>
+
+    <!--! Footer section-->
+    <footer class="mt-5">
+      <div
+        class="email container d-flex justify-content-between pt-5 align-items-center pb-5 mb-4"
+      >
+        <div class="email_left">
+          <h1>Join our newsletter for ₤10 offs</h1>
+          <p>
+            Register now to get latest updates on promotions & coupons.Don’t
+            worry, we not spam!
+          </p>
+        </div>
+        <div class="email_right">
+          <div class="input-group mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email address"
+              aria-label="Client's email input"
+              aria-describedby="basic-addon2"
+            />
+            <button class="btn btn-primary btn-send input-group-text">
+              Send
+            </button>
+          </div>
+          <p>
+            By subscribing you agree to our
+            <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer container mt-5">
+        <div class="footer_top d-flex justify-content-between mb-5 pb-5">
+          <ul>
+            <h5>Do you need help?</h5>
+            <li>
+              Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda nynat.
+              Pressa fåmoska.
+            </li>
+            <li>
+              <img src="./src/icons/phone.svg" alt="" />
+              <div class="phone">
+                <p>Monday-Friday: 08am-9pm</p>
+                <p
+                  class="h4"
+                  style="font-weight: 700; font-size: 20px; color: #000"
+                >
+                  0 800 300-353
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="./src/icons/envelope.svg" alt="" />
+              <div class="envelope">
+                <p>Need help with your order?</p>
+                <p
+                  class="h5"
+                  style="font-weight: 600; font-size: 14px; color: #000"
+                >
+                  info@example.com
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <h5>Make Money with Us</h5>
+            <li><a href="#">Sell on Grogin</a></li>
+            <li><a href="#">Sell Your Services on Grogin</a></li>
+            <li><a href="#">Sell on Grogin Business</a></li>
+            <li><a href="#">Sell Your Apps on Grogin</a></li>
+            <li><a href="#">Become an Affilate</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Sell-Publish with Us</a></li>
+            <li><a href="#">Become an Blowwe Vendor</a></li>
+          </ul>
+          <ul>
+            <h5>Let Us Help You</h5>
+            <li><a href="#">Accessibility Statement</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Returns & Replacements</a></li>
+            <li><a href="#">Shipping Rates & Policies</a></li>
+            <li><a href="#">Refund and Returns Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+          <ul>
+            <h5>Get to know us</h5>
+            <li><a href="#">Careers for Grogin</a></li>
+            <li><a href="#">About Grogin</a></li>
+            <li><a href="#">Inverstor Relations</a></li>
+            <li><a href="#">Grogin Devices</a></li>
+            <li><a href="#">Customer reviews</a></li>
+            <li><a href="#">Social Responsibility</a></li>
+            <li><a href="#">Store Locations</a></li>
+          </ul>
+          <ul>
+            <h5>Download our app</h5>
+            <li>
+              <a href="#"><img src="./src/icons/google-play.svg" alt="" /></a>
+              <p class="mt-2">Download App Get -10% Discount</p>
+            </li>
+            <li>
+              <a href="#"><img src="./src/icons/app-store.svg" alt="" /></a>
+              <p class="mt-2">Download App Get -20% Discount</p>
+            </li>
+
+            <li style="color: #000">Follow us on social media:</li>
+            <li>
+              <div class="links">
+                <div class="link">
+                  <a href="#"><img src="./src/icons/facebook.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/twitter.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/instagram.svg" alt="" /></a>
+                </div>
+                <div class="link">
+                  <a href="#"><img src="./src/icons/linkedin.svg" alt="" /></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer_bottom d-flex align-items-center justify-content-between mb-4"
+        >
+          <div class="copyright">
+            <p class="copyright-year"></p>
+            <div class="payment d-flex align-items-center gap-2">
+              <img src="./src/icons/visa.svg" alt="" />
+              <img src="./src/icons/circles.svg" alt="" />
+              <img src="./src/icons/paypal.svg" alt="" />
+              <img src="./src/icons/skrill.svg" alt="" />
+              <img src="./src/icons/klarna.svg" alt="" />
+            </div>
+          </div>
+          <div class="rules d-flex align-items-center gap-2">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Order Tracking</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--! Footer section ends-->
+
+    <!-- Connecting scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/header-timer.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/shop-products.js"></script>
+    <script src="./js/products-timer.js"></script>
+    <script src="./js/mid-header-dropdown.js"></script>
+    <script src="./js/filter-price.js"></script>
+    <script src="./js/copyright.js"></script>
+    <script src="./js/card-add.js"></script>
+  </body>
+</html>

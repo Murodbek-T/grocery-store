@@ -1,0 +1,6 @@
+@mixin makeBox($width, $height, $gradient) {
+  width: $width;
+  height: $height;
+  background-image: $gradient;
+  border-radius: 5px;
+}

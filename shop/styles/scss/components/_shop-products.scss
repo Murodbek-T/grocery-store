@@ -1,0 +1,48 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+@use "../components/card";
+
+.shopping-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .label-text {
+    @include mixins.makeBox(100px, 30px, var.$milk-color-bcg);
+    background-color: var.$milk-color-bcg;
+    color: var.$milk-color;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  h1 {
+    font-weight: 700;
+  }
+
+  p {
+    color: var.$mid-gray;
+  }
+}
+
+.btn-cart {
+  background-color: var.$green;
+  &:hover {
+    background-color: rgba(var.$green, 0.7);
+  }
+  &:active {
+    background-color: rgba(var.$green, 0.5);
+  }
+}
+
+.ctg {
+  font-weight: 700;
+  color: var.$purple;
+}
+
+#pagination {
+  z-index: 9;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}

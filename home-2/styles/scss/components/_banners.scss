@@ -1,0 +1,43 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.banner {
+  border-radius: 5px;
+  background-image: url("../../src/images/banner1.jpg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 240px;
+  width: 680px;
+
+  .topic {
+    @include mixins.makeBox(102px, 22px, var.$milk-color-bcg);
+    color: var.$milk-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  h1 {
+    max-width: 350px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  p {
+    color: var.$mid-gray;
+  }
+  .banner-btn {
+    background-color: #fff;
+    border-radius: 999px;
+    &:hover {
+      color: var.$mid-gray;
+    }
+  }
+}
+
+.banner2 {
+  @extend .banner;
+  background-image: url("../../src/images/banner2.jpg.png");
+}

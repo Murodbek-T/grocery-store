@@ -1,0 +1,8 @@
+@use "../components/email";
+@use "../abstract/variables" as var;
+@use "../components/footer-top";
+@use "../components/footer-bottom";
+
+footer {
+  background-color: var.$categories-bcg-color;
+}

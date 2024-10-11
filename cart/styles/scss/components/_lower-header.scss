@@ -1,0 +1,71 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.lower_header {
+  .btn-dark {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-weight: 600;
+
+    &:active {
+      background: transparent;
+      color: #000;
+    }
+  }
+
+  .dropdown-item {
+    color: #fff;
+  }
+
+  a {
+    position: relative;
+    font-weight: 600;
+    color: #000;
+    transition: color 0.3s;
+
+    &.nav-active {
+      color: var.$purple;
+    }
+    &.nav-active::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 5px;
+      border-bottom: 2px solid var.$purple;
+      bottom: -10px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+    &:hover {
+      color: var.$purple;
+      transition: color 0.3s;
+    }
+  }
+
+  .btnSale {
+    color: red;
+    display: flex;
+    align-items: center;
+    &:active {
+      color: red;
+    }
+
+    .sale {
+      @include mixins.makeBox(45px, 25px, var.$sale-bcg);
+      margin-left: 5px;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "../abstract/variables" as var;
+
+.category_img {
+  width: 122px;
+  height: 122px;
+  background-color: var.$categories-bcg-color;
+  border-radius: 50%;
+}
+
+.category_item {
+  text-align: center;
+}
+.category_text {
+  font-size: 13px;
+  font-weight: 700;
+}

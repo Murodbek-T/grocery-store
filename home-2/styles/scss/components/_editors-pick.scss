@@ -1,0 +1,30 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+@use "../components/card";
+
+.main {
+  background-image: var.$main-bcg;
+}
+
+.text {
+  p {
+    color: var.$light-gray;
+  }
+}
+
+.viewAll {
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  color: #000;
+  border-radius: 999px;
+  &:hover {
+    border: 1px solid #fff;
+    background-color: #000 !important;
+    color: #fff;
+  }
+}
+
+.double_cards {
+  display: flex;
+  flex-direction: column;
+}

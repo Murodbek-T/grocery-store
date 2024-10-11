@@ -1,0 +1,57 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.news {
+  .card {
+    cursor: pointer;
+  }
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: -0.36px;
+}
+
+.news-description {
+  color: var.$timer-color;
+  font-size: 13px;
+}
+
+.author {
+  font-weight: 700;
+  border-right: 1px solid var.$light-gray;
+  padding-right: 20px;
+
+  .italic {
+    font-style: italic;
+    font-weight: 400;
+    color: var.$mid-gray;
+    padding-right: 5px;
+  }
+}
+
+.upload-date {
+  color: var.$mid-gray;
+  font-style: oblique;
+}
+
+.card-top {
+  position: relative;
+
+  .news-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    @include mixins.makeBox(110px, 30px, var.$news-label);
+    font-size: 11px;
+    color: var.$purple;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,33 @@
+@use "../components/editors-pick";
+@use "../abstract/variables" as var;
+@use "../abstract/mixins";
+
+.best-sellers {
+  &_bottom {
+    height: 965px;
+    overflow-y: hidden;
+  }
+}
+
+.big-card-button {
+  background-color: var.$purple;
+  width: 100%;
+  border: 1px solid var.$purple;
+  &:hover {
+    background-color: #fff;
+    color: var.$purple;
+  }
+  &:active {
+    background-color: var.$purple !important;
+    color: #fff;
+    border: 1px solid var.$purple !important;
+  }
+}
+
+.clicked{
+  height: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,80 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.hero {
+  .background {
+    padding: 10px;
+    background-image: url("../../src/images/hero-bcg1.png");
+    height: 82vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bcg2 {
+    padding: 10px;
+    background-image: url("../../src/images/hero-bcg-2.png");
+    height: 82vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .weekend-discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.makeBox(150px, 28px, var.$green-bcg);
+    color: var.$dark-green;
+    font-size: 16px;
+  }
+
+  h1 {
+    color: var.$dark-purple;
+    font-weight: 700;
+    max-width: 570px;
+    font-size: 58px;
+    line-height: 63px;
+  }
+
+  p {
+    max-width: 472px;
+    line-height: 22px;
+  }
+
+  .btn {
+    background-color: var.$dark-purple;
+    border: none;
+    padding: 12px 24px;
+
+    &:active {
+      background-color: rgba(var.$dark-purple, 0.7);
+    }
+  }
+
+  .new {
+    color: var.$orange;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .old {
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 19px;
+  }
+
+  .underText {
+    color: var.$mid-gray;
+    font-size: 14px;
+  }
+
+  .carousel-indicators {
+    .active {
+      background-color: var.$purple;
+    }
+  }
+}

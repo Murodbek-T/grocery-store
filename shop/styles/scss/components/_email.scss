@@ -1,0 +1,60 @@
+@use "../abstract/variables" as var;
+
+.email {
+  border-bottom: 1px solid var.$light-gray;
+}
+
+.email_left {
+  h1 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 15px;
+    max-width: 350px;
+    color: var.$mid-gray;
+  }
+}
+
+.email_right {
+  a {
+    color: var.$purple;
+  }
+  p {
+    font-size: 13px;
+    color: var.$mid-gray;
+  }
+}
+
+#email {
+  box-shadow: 0px 1px 2px 0px #0000000c;
+  padding: 12px 0px;
+  padding-left: 10px;
+  &:focus {
+    border: 1px solid var.$purple;
+  }
+
+  &::placeholder {
+    color: var.$mid-gray;
+  }
+}
+
+.btn-send {
+  background-color: var.$purple;
+  border: 1px solid var.$purple;
+  transition: filter 0.3s;
+
+  &:hover {
+    background-color: var.$purple;
+    filter: brightness(150%);
+    transition: filter 0.3s;
+    border: 1px solid var.$purple;
+  }
+
+  &:active {
+    background-color: var.$purple !important;
+    border: 1px solid var.$purple;
+    filter: brightness(80%);
+  }
+}

@@ -1,0 +1,22 @@
+@use "../abstract/variables" as var;
+
+.motto {
+  background-image: url("../../src/images/motto.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: var.$milk-color-bcg;
+  height: 85px;
+  border-radius: 5px;
+
+  &_text {
+    line-height: 10px;
+    color: var.$orange;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  &_description {
+    font-size: 14px;
+    color: var.$mid-gray;
+  }
+}

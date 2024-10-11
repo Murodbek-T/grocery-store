@@ -1,0 +1,105 @@
+@use "../abstract/variables" as var;
+
+.cart-aside {
+  padding: 20px;
+  width: 380px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  p {
+    color: var.$light-gray;
+  }
+
+  [type="radio"] {
+    &:checked {
+      background-color: var.$purple;
+      border: 1px solid var.$purple;
+    }
+  }
+}
+
+.checkout-top {
+  border-bottom: 1px solid var.$light-gray;
+
+  h4 {
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+.checkout-main {
+  border-bottom: 1px solid var.$light-gray;
+
+  #name {
+    width: 170px;
+  }
+}
+
+.subtotal {
+  border-bottom: 1px solid var.$light-gray;
+}
+
+.shipping {
+  border-bottom: 1px solid var.$light-gray;
+}
+.total {
+  border-bottom: 1px solid var.$light-gray;
+}
+.total-price {
+  font-weight: 700;
+}
+
+.amount {
+  font-weight: 700;
+}
+
+.checkout-payment {
+  label {
+    font-weight: 700;
+  }
+}
+
+.privacy {
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+.terms {
+  h6 {
+    font-size: 12px;
+
+    a {
+      color: var.$purple;
+    }
+  }
+  #defaultCheck1:checked {
+    background-color: var.$purple;
+    border: 1px solid var.$purple;
+  }
+}
+
+.order-btn {
+  background-color: var.$purple;
+  border: 1px solid var.$purple;
+  width: 100%;
+  margin-top: 20px;
+  padding-block: 10px;
+
+  &:hover {
+    background-color: rgba($color: var.$purple, $alpha: 0.8);
+    border: 1px solid var.$purple;
+  }
+  &:active {
+    background-color: var.$purple !important;
+    border: 1px solid var.$purple;
+  }
+
+  &:disabled {
+    background-color: rgba(
+      $color: rgba($color: var.$purple, $alpha: 0.8),
+      $alpha: 1
+    );
+    border: 1px solid var.$purple;
+  }
+}

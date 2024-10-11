@@ -1,0 +1,27 @@
+@use "./card";
+@use "../abstract/variables" as var;
+
+.btn-cart {
+  background-color: var.$green;
+  &:hover {
+    background-color: rgba(var.$green, 0.5);
+  }
+}
+
+.card_bottom {
+  h6 {
+    color: var.$green;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.products_bottom {
+  height: 500px;
+  overflow-y: hidden;
+}
+
+.all {
+  height: auto;
+  overflow: auto;
+}
